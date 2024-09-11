@@ -1,0 +1,94 @@
+@use '../utils/settings'as*;
+
+
+
+.basicForm{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $bgr5; 
+    box-shadow: $shadow;
+    background-color: $bgr1;
+    width: 300px;
+    flex-shrink: 0;
+    align-self: flex-start;
+    .header{        
+        border-bottom: 1px solid $bgr5 ;         
+        @include bgr-color($bgr4,$bgr1);
+        padding: .5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+
+    label, button{
+        margin: .5rem;
+    }
+
+    label{
+        color: $bgr5;
+    }
+
+    input, select{   
+        border:1px solid $bgr2;             
+        margin: .5rem;
+        font-size: $font-size;
+        padding: .2rem; 
+        color: $bgr4;
+    } 
+}
+
+.error{
+    color: red !important;
+}
+
+fieldset{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    padding:5px;
+    margin: 5px;
+}
+
+legend{
+    margin-left: 5px;
+    padding: 0 5px;
+    font-weight: $b-font-weight;
+    font-size: $s-font-size;
+}
+
+.basicCheckbox{
+
+    input[type="radio"], input[type="checkbox"]{
+        display: none;
+    }
+
+    label{
+        @include bgr-color($bgr1, $bgr5);
+        padding: 0.3rem 0.5rem;
+        margin: 0.1rem;
+        border-radius: 5px;
+        border: 1px solid $bgr3;
+        cursor: pointer;
+    }
+
+    input[type="radio"]:checked+label{
+        @include bgr-color($bgr3, $bgr1);
+    }
+
+    input[type="checkbox"]:checked+label{
+        @include bgr-color($bgr3, $bgr1);
+    }
+}
+
+
+.inputFlex{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.inputError{
+    border:1px solid red !important;   
+}
+

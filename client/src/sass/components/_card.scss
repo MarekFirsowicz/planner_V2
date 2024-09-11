@@ -1,0 +1,35 @@
+@use '../utils/settings' as*;
+
+
+.card{
+    border: 1px solid $borderColour1;    
+    box-shadow: $shadow;
+    color: $fontColour2;
+    
+    .header{
+        display: flex;
+        background-color: $bgr4;        
+        justify-content: space-between;    
+        padding: 5px;        
+        i{
+            color: $bgr1;
+            margin-left: 10px;
+            &:hover {
+                color: $bgr3;
+            }
+        }        
+    }
+    
+    .body{
+        color: $fontColour1;
+        padding: 10px;
+        background-color: $bgr1;
+        div{
+            display: flex;
+            justify-content: space-between;
+            span{
+                margin-left: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+@use '../utils/settings' as*;
+
+
+.basicTable{
+    max-width: 95%;
+    margin: .5rem auto;
+    white-space: nowrap;
+    box-shadow: $shadow;
+
+    thead {
+        background-color: $bgr2;
+    }
+
+    tbody {
+        background-color: $bgr1;
+    }
+
+    th {
+        padding: 0.3rem;
+    }
+
+    td {
+        padding: 0.3rem;
+        i{
+            &:hover{
+                color: $bgr3;
+            }
+        }
+    }
+}
+
+.confirms{
+    display: flex;
+    >div{
+        height: 1.6rem;
+        width: 1.6rem;
+        font-size: $s-font-size;
+        line-height: 1.6rem;
+        text-align: center;
+        border-radius: 50%;
+        border: 1px solid $bgr3;
+        margin:0 0.1rem;
+    }
+}
+
+.pagination{
+    
+}

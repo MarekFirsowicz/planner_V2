@@ -1,0 +1,33 @@
+@use '../utils/settings' as*;
+
+button{
+    background-color: transparent;
+    border: 1px solid $bgr5;
+    padding: 5px;
+    transition: all .1s ease-in;
+    cursor: pointer;
+}
+
+button:has(>i){
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+button:has(>i):hover{
+    color: $bgr3;
+}
+
+.headerButton{
+    color: $bgr1;
+}
+
+.btnSubmit{
+    align-self: flex-end;
+    @include bgr-color($bgr4, $bgr1);
+    &:hover{
+        @include bgr-color($bgr3, $bgr1)
+    }    
+    
+}

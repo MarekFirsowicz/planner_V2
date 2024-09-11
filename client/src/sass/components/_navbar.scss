@@ -1,0 +1,96 @@
+@use '../utils/settings' as*;
+
+
+// main navbar
+
+.root-layout {
+    
+    >header {
+        background-color: $bgr4;
+        box-shadow: $shadow;
+        display: flex;
+
+        button {
+            margin-left: auto;
+            margin-right: 1rem;
+            border: none;
+            i {
+                color: $bgr1;
+                &:hover {
+                    color: $bgr3
+                }
+            }
+        }
+
+        >nav {
+            margin-left: 4rem;
+            pointer-events: auto;
+            display: inline-flex;
+            :first-child{
+                border-left: 1px solid $bgr3;
+            }
+            a {
+                text-decoration: none;
+                color: $fontColour2;
+                padding: 1rem;
+                border-right: 1px solid $bgr3;
+                width: 10rem;
+                text-align: center;
+                cursor: pointer;                
+                &:hover {
+                    background-color: $bgr3;
+                }
+            }
+            .active {
+                background-color: $bgr3;
+            }
+        }
+
+        .activeYear {
+            margin-left: 1rem;
+            display: inline-flex;
+            align-items: center;
+            div {
+                color: $bgr1;
+            }
+            button:disabled i {
+                cursor: default;
+                color: grey;
+            }
+        }
+    }
+}
+
+
+//admin navbar
+
+.admin-layout {
+    display: flex;
+    margin-top: 0.5rem;
+    >header {
+        margin: 0 5px;
+        nav {
+            display: flex;
+            flex-direction: column;
+            font-size: 3rem;
+            align-items: center;
+            border: 1px solid $borderColour1;
+            background-color: $bgr1;
+            padding: 5px;
+            border-radius: 10px 0 0 10px;
+            box-shadow: $shadow;
+
+            .active {
+                color: $bgr3;
+            }           
+        }
+    }
+
+    main{
+        display: flex;        
+        align-items: flex-start;        
+        flex-wrap: wrap;
+        gap: .5rem;       
+    }
+    
+}

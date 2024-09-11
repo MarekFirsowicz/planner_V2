@@ -1,0 +1,127 @@
+/*Fonts sizes*/
+$vs-font-size: 1.1rem;
+$s-font-size: 1.2rem;
+$font-size: 1.6rem;
+$l-font-size: 2rem;
+$vl-font-size: 3rem;
+
+$r-font-weight: 400;
+$m-font-weight: 600;
+$b-font-weight: 800;
+
+
+$roboto: 'Inter';
+
+/*colors*/
+$bgr1: white;
+$bgr2: rgb(140, 184, 17);
+$bgr3:rgb(229,83,0);
+$bgr4:#464c56;
+$bgr5: black;
+
+
+
+$fontColour1: black;
+$fontColour2: white;
+
+$borderColour1: black;
+
+$shadow: 2px 2px 12px rgba(0,0,0,0.2), -1px -1px 8px rgba(0,0,0, 0.2);
+
+/*Calemdar cells*/
+$cellsize : 45px;
+$nightColour: rgba(2,48,71,0.7);
+$dayColour: rgb(255,204,0,0.7);
+
+/*mixin*/
+
+@mixin bgr-color($bgrColor, $color){
+    background-color: $bgrColor;
+    color:$color;
+};
+
+
+
+/*casic formating*/
+h1,
+h2,
+h3,
+h4 {
+    font-weight: $b-font-weight;
+}
+
+h1 {
+    font-size: $vl-font-size;
+}
+
+h2 {
+    font-size: $l-font-size;
+}
+
+body {
+    font-family: $roboto;
+    overflow: auto;
+    min-height: 100vh;
+    font-size: $font-size;
+    background-color: #DCDCDC;
+    color: black;
+    white-space: nowrap;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li{
+    list-style-type: none;
+}
+
+
+/*events*/
+.holiday{
+    background-color: green ;
+    color:white
+}
+
+.decline{
+    background-color: gray ;
+    color:white
+}
+
+.aaup{
+    background-color: yellow ;
+    color:black
+}
+
+.absence{
+    background-color: pink ;
+    color:black
+}
+
+.other{
+    background-color: navy ;
+    color:white
+}
+
+.cancelled{
+    border: 3px solid red !important;
+    
+}
+
+.updated{
+    border: 3px solid blue !important;
+    
+}
+
+.opacity50 {
+    opacity: 50%;
+}
+
+.today {
+    color: red;
+}
+
+.active {
+    color: $bgr3;
+}

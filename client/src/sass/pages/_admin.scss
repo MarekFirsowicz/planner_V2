@@ -1,0 +1,28 @@
+@use '../utils/settings' as*;
+
+
+.edit{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    gap: 0.5rem;
+    flex: 1 0 0;
+}
+
+.adjustments{
+    display: flex;
+    margin: 0.5rem;
+    flex-direction: column;
+    max-height: 200px;
+    overflow-y: auto;
+    &>*{
+        display: flex;
+        align-items: center;
+        margin: 0;
+        justify-content: space-between;
+    }
+}
+
+.formError{
+    color: red;
+}

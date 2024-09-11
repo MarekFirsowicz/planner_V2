@@ -1,0 +1,13 @@
+@use 'utils/reset';
+//@use 'utils/settings';
+
+
+@use 'components/button';
+@use 'components/card';
+@use 'components/forms';
+@use 'components/navbar';
+@use 'components/table';
+
+@use 'pages/login';
+@use 'pages/admin';
+@use 'pages/staff';

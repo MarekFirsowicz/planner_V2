@@ -1,0 +1,398 @@
+/*reset*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/*global settings*/
+html {
+  font-size: 62.5%;
+}
+
+/*Fonts sizes*/
+/*colors*/
+/*Calemdar cells*/
+/*mixin*/
+/*casic formating*/
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 800;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+body {
+  font-family: "Inter";
+  overflow: auto;
+  min-height: 100vh;
+  font-size: 1.6rem;
+  background-color: #DCDCDC;
+  color: black;
+  white-space: nowrap;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style-type: none;
+}
+
+/*events*/
+.holiday {
+  background-color: green;
+  color: white;
+}
+
+.decline {
+  background-color: gray;
+  color: white;
+}
+
+.aaup {
+  background-color: yellow;
+  color: black;
+}
+
+.absence {
+  background-color: pink;
+  color: black;
+}
+
+.other {
+  background-color: navy;
+  color: white;
+}
+
+.cancelled {
+  border: 3px solid red !important;
+}
+
+.updated {
+  border: 3px solid blue !important;
+}
+
+.opacity50 {
+  opacity: 50%;
+}
+
+.today {
+  color: red;
+}
+
+.active {
+  color: rgb(229, 83, 0);
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid black;
+  padding: 5px;
+  transition: all 0.1s ease-in;
+  cursor: pointer;
+}
+
+button:has(> i) {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+button:has(> i):hover {
+  color: rgb(229, 83, 0);
+}
+
+.headerButton {
+  color: white;
+}
+
+.btnSubmit {
+  align-self: flex-end;
+  background-color: #464c56;
+  color: white;
+}
+.btnSubmit:hover {
+  background-color: rgb(229, 83, 0);
+  color: white;
+}
+
+.card {
+  border: 1px solid black;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+.card .header {
+  display: flex;
+  background-color: #464c56;
+  justify-content: space-between;
+  padding: 5px;
+}
+.card .header i {
+  color: white;
+  margin-left: 10px;
+}
+.card .header i:hover {
+  color: rgb(229, 83, 0);
+}
+.card .body {
+  color: black;
+  padding: 10px;
+  background-color: white;
+}
+.card .body div {
+  display: flex;
+  justify-content: space-between;
+}
+.card .body div span {
+  margin-left: 10px;
+}
+
+.basicForm {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  width: 300px;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+.basicForm .header {
+  border-bottom: 1px solid black;
+  background-color: #464c56;
+  color: white;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.basicForm label, .basicForm button {
+  margin: 0.5rem;
+}
+.basicForm label {
+  color: black;
+}
+.basicForm input, .basicForm select {
+  border: 1px solid rgb(140, 184, 17);
+  margin: 0.5rem;
+  font-size: 1.6rem;
+  padding: 0.2rem;
+  color: #464c56;
+}
+
+.error {
+  color: red !important;
+}
+
+fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  padding: 5px;
+  margin: 5px;
+}
+
+legend {
+  margin-left: 5px;
+  padding: 0 5px;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.basicCheckbox input[type=radio], .basicCheckbox input[type=checkbox] {
+  display: none;
+}
+.basicCheckbox label {
+  background-color: white;
+  color: black;
+  padding: 0.3rem 0.5rem;
+  margin: 0.1rem;
+  border-radius: 5px;
+  border: 1px solid rgb(229, 83, 0);
+  cursor: pointer;
+}
+.basicCheckbox input[type=radio]:checked + label {
+  background-color: rgb(229, 83, 0);
+  color: white;
+}
+.basicCheckbox input[type=checkbox]:checked + label {
+  background-color: rgb(229, 83, 0);
+  color: white;
+}
+
+.inputFlex {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.inputError {
+  border: 1px solid red !important;
+}
+
+.root-layout > header {
+  background-color: #464c56;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+}
+.root-layout > header button {
+  margin-left: auto;
+  margin-right: 1rem;
+  border: none;
+}
+.root-layout > header button i {
+  color: white;
+}
+.root-layout > header button i:hover {
+  color: rgb(229, 83, 0);
+}
+.root-layout > header > nav {
+  margin-left: 4rem;
+  pointer-events: auto;
+  display: inline-flex;
+}
+.root-layout > header > nav :first-child {
+  border-left: 1px solid rgb(229, 83, 0);
+}
+.root-layout > header > nav a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  border-right: 1px solid rgb(229, 83, 0);
+  width: 10rem;
+  text-align: center;
+  cursor: pointer;
+}
+.root-layout > header > nav a:hover {
+  background-color: rgb(229, 83, 0);
+}
+.root-layout > header > nav .active {
+  background-color: rgb(229, 83, 0);
+}
+.root-layout > header .activeYear {
+  margin-left: 1rem;
+  display: inline-flex;
+  align-items: center;
+}
+.root-layout > header .activeYear div {
+  color: white;
+}
+.root-layout > header .activeYear button:disabled i {
+  cursor: default;
+  color: grey;
+}
+
+.admin-layout {
+  display: flex;
+  margin-top: 0.5rem;
+}
+.admin-layout > header {
+  margin: 0 5px;
+}
+.admin-layout > header nav {
+  display: flex;
+  flex-direction: column;
+  font-size: 3rem;
+  align-items: center;
+  border: 1px solid black;
+  background-color: white;
+  padding: 5px;
+  border-radius: 10px 0 0 10px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+}
+.admin-layout > header nav .active {
+  color: rgb(229, 83, 0);
+}
+.admin-layout main {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.basicTable {
+  max-width: 95%;
+  margin: 0.5rem auto;
+  white-space: nowrap;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+}
+.basicTable thead {
+  background-color: rgb(140, 184, 17);
+}
+.basicTable tbody {
+  background-color: white;
+}
+.basicTable th {
+  padding: 0.3rem;
+}
+.basicTable td {
+  padding: 0.3rem;
+}
+.basicTable td i:hover {
+  color: rgb(229, 83, 0);
+}
+
+.confirms {
+  display: flex;
+}
+.confirms > div {
+  height: 1.6rem;
+  width: 1.6rem;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid rgb(229, 83, 0);
+  margin: 0 0.1rem;
+}
+
+.login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.edit {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  gap: 0.5rem;
+  flex: 1 0 0;
+}
+
+.adjustments {
+  display: flex;
+  margin: 0.5rem;
+  flex-direction: column;
+  max-height: 200px;
+  overflow-y: auto;
+}
+.adjustments > * {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  justify-content: space-between;
+}
+
+.formError {
+  color: red;
+}
